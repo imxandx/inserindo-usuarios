@@ -1,5 +1,7 @@
-require("dotenv").config();
-import mysql from "mysql"
+import dotenv from "dotenv";
+import mysql from "mysql";
+
+dotenv.config();
 
 const dbHost = process.env.DB_HOST;
 const dbUser = process.env.DB_USER;
@@ -11,4 +13,4 @@ export const db = mysql.createConnection({
     user: dbUser,
     password: dbPassword,
     database: db_
-})
+});
